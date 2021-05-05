@@ -12,21 +12,21 @@ package exercise_4_2;
 public class Main {
 
 	public static void main(String[] args) {
-		Apple s = new Apple("Apel", "tasteless", 10, 2);
+		Apple s = new Apple("Apel", "tasteless", 100, 20);
 		s.printHint();
 		System.out.println(s);// Overriding toString of Fruit
 		s.printSugarPercentage(100, 1);
 		//Overloading method in apple class
 		s.printPricePerMass();
 
-		GreenApple GA = new GreenApple("Unripe Apple", "Sour", 5, 3, 14);
+		GreenApple GA = new GreenApple("Unripe Apple", "Sour", 50, 30, 14);
 		GA.printHint();
 		System.out.println(GA);// Overriding toString of Apple
 		GA.printSugarPercentage(100, 2);
 		//Overloading method inherited from apple class
 		GA.printPricePerMass();
 
-		RedApple RA = new RedApple("Little Apple", "Sweet", 10, 2, 7);
+		RedApple RA = new RedApple("Little Apple", "Sweet", 100, 20, 7);
 		RA.printHint();
 		System.out.println(RA);// Overriding toString of Apple
 		RA.printSugarPercentage(100, 0.5);

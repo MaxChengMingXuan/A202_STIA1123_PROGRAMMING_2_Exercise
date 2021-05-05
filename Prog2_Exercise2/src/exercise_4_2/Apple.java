@@ -10,6 +10,23 @@ public class Apple extends Fruit {
 		this.price=price;
 		this.mass=mass;
 		System.out.println("");
+		
+		if(this.mass<10) {
+			totalGift();
+			System.out.println(name);
+			System.out.println("Number of gift: "+0);
+		}
+		else if(this.mass>=10&&this.mass<=100) {
+			int giftCount=this.mass/10;
+			totalGift(giftCount);
+			System.out.println("Number of gift: "+totalGift(giftCount));
+		}
+		else {
+			int giftCount=this.mass/5;
+			double extraGift=1.5;
+			totalGift(extraGift,giftCount);
+			System.out.println("Number of gift: "+totalGift(extraGift,giftCount));
+		}
 	}
 	
 	
@@ -17,6 +34,19 @@ public class Apple extends Fruit {
 	public void printHint() {
 		System.out.println("This is a type of apple.");
 		System.out.println("It tastes "+super.getTaste()+".");
+	}
+	
+	//Overloading ———— Gift
+	public double totalGift() {
+		return this.mass;
+	}
+	
+	public double totalGift(int quantity) {
+		return this.mass*quantity;
+	}
+	
+	public double totalGift(double bigGift,int quantity) {
+		return this.mass*quantity*bigGift;
 	}
 	
 	//Overloading 1: output in RM/kg
